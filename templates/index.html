@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <center><h1 style="color: red;,font: 5em sans-serif;">Jupitor Breast-Cancer Predictor</h1></center>
+        <form action="{{url_for('predict')}}" method="post">
+            <center>
+            <input type="text" name="mean radius" placeholder="mean radius" required="required">
+            <input type="text" name="mean texture" placeholder="mean texture" required="required">
+            <input type="text" name="mean perimeter" placeholder="mean perimeter" required="required">
+            <input type="text" name="mean area" placeholder="mean area" required="required">
+            <input type="text" name="mean smoothness" placeholder="mean smoothness" required="required">
+            <input type="text" name="mean compactness" placeholder="mean compactness" required="required"><br>
+            <input type="text" name="mean concavity" placeholder="mean concavity" required="required">
+            <input type="text" name="mean concave point" placeholder="mean concave point" required="required">
+            <input type="text" name="mean symmetry" placeholder="mean symmetry" required="required">
+            <input type="text" name="mean fractal dimension" placeholder="mean fractal dimension" required="required">
+            <input type="text" name="radius error" placeholder="radius error" required="required">
+            <input type="text" name="texture error" placeholder="texture error" required="required"><br>
+            <input type="text" name="perimeter error" placeholder="perimeter error" required="required">
+            <input type="text" name="area error" placeholder="area error" required="required">
+            <input type="text" name="smoothness error" placeholder="smoothness error" required="required">
+            <input type="text" name="compactness error" placeholder="compactness error" required="required">
+            <input type="text" name="concavity error" placeholder="concavity error" required="required">
+            <input type="text" name="concave point error" placeholder="concave point error" required="required"><br>
+            <input type="text" name="symmetry error" placeholder="symmetry error" required="required">
+            <input type="text" name="fractal dimension error" placeholder="fractal dimension error" required="required">
+            <input type="text" name="worst radius" placeholder="wrost radius" required="required">
+            <input type="text" name="worst texture" placeholder="worst texture" required="required">
+            <input type="text" name="worst perimeter" placeholder="worst perimeter" required="required">
+            <input type="text" name="wrost area" placeholder="wrost area" required="required"><br>
+            <input type="text" name="wrost smoothness" placeholder="wrost smoothness" required="required">
+            <input type="text" name="worst compactness" placeholder="wrost compactness" required="required">
+            <input type="text" name="wrost concavity" placeholder="wrost concavity" required="required">
+            <input type="text" name="wrost concave point" placeholder="wrost concave point" required="required">
+            <input type="text" name="worst" placeholder="symmetry" required="required">
+            <input type="text" name="wrost fractal dimension" placeholder="wrost fractal dimension" required="required"><br><br>
+            <button type="submit" style="font-size: large; color: rgb(255, 0, 0);">Predict</button>
+            </center>
+        </form>
+    <br><br>
+    <center>
+    <h1 style="color: red; background-color: white;">{{prediction_text}}</h1>
+    </center>
+</body>
+</html>
