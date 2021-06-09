@@ -5,7 +5,7 @@ import math
 import os
 
 port = int(os.environ.get('PORT' ,5000))
-app.run(host = '0.0.0.0' , port = port , debug = True)
+
 
 app = Flask(__name__)
 model = pickle.load(open('breast-cancer.pickle','rb'))
@@ -26,4 +26,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host = '0.0.0.0' , port = port , debug = True)
